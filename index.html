@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu Horizotal</title>
+    <link rel="stylesheet" href="css.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+
+<body>
+    <header>
+        <nav class="desplegable">
+            <img class="logo" src="phone.svg">
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li>
+                    <a href="#">Acerca de</a>
+                    <ul class="submenu">
+                        <li>
+                            <a href="#">Historia</a>
+                            <ul class="subsub">
+                                <li><a href="#">Cuando</a></li>
+                                <li><a href="#">Donde</a></li>
+                                <li><a href="#">Porque</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Equipo</a></li>
+                        <li><a href="#">Carreras</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">Servicios</a></li>
+                <li>
+
+                    <a href="#">Portafolio</a>
+                    <ul class="submenu">
+                        <li><a href="#">Proyectos</a></li>
+                        <li>
+                            <a href="#">Clientes</a>
+                            <ul class="subsub">
+                                <li><a href="#">Iniciados</a></li>
+                                <li><a href="#">Amateur</a></li>
+                                <li><a href="#">Expertos</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h2>Crea tu cuenta</h2>
+            <form>
+                <div class="input-container">
+                    <i class="material-icons input-icon">account_circle</i>
+                    <input class="datos" type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+                </div>
+    
+                <div class="input-container">
+                    <i class="material-icons input-icon">badge</i>
+                    <input class="datos" type="text" id="apellidos" name="apellidos" placeholder="Apellidos" required>
+                </div>
+    
+                <div class="input-container">
+                    <i class="material-icons input-icon">calendar_today</i>
+                    <input class="datos" type="date" id="fecha-nacimiento" name="fecha-nacimiento" required>
+                </div>
+    
+                <div class="input-container">
+                    <i class="material-icons input-icon">phone</i>
+                    <input  class="datos" type="tel" id="telefono" name="telefono" pattern="[0-9]{9}" required placeholder="Tlf">
+                </div>
+    
+                <div class="input-container">
+                    <i class="material-icons input-icon">email</i>
+                    <input class="datos" type="email" id="correo" name="correo" required placeholder="ejemplo@dominio.com">
+                </div>
+    
+                <label>
+                    <input class="terminos" type="checkbox" id="terminos" name="terminos" required>
+                    Acepto los <a href="#">términos de uso</a>.
+                </label>
+    
+                <button type="submit">Aceptar</button>
+            </form>
+        </section>
+    </main>
+    
+
+</body>
+
+</html>

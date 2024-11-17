@@ -1,0 +1,219 @@
+/* Estilos del body */
+body {
+    /* Fondo del body con una imagen, ajustado para cubrir toda la pantalla */
+    background-image: url(fondo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0; /* Eliminar márgenes predeterminados */
+    font-family: Arial, Helvetica, sans-serif; /* Fuente para todo el documento */
+}
+
+/* Estilos del header */
+header {
+    /* Color de fondo del encabezado */
+    background-color: #0F273C;
+}
+
+/* Estilos del nav */
+nav {
+    /* Configuración de layout del menú de navegación */
+    display: flex;
+    align-items: center; /* Centrar verticalmente */
+    padding: 25px;
+    position: relative; /* Necesario para posicionar elementos secundarios (submenús) */
+}
+
+/* Estilos de la logo */
+.logo {
+    /* Dimensiones de la imagen del logo */
+    width: 60px;
+    height: auto; /* Mantiene proporciones */
+    margin-right: 20%; /* Separación del logo respecto al menú */
+}
+
+/* Estilos de los elementos de la lista del nav */
+nav ul {
+    /* Estilos para los elementos del menú principal */
+    list-style: none; /* Eliminar puntos de las listas */
+    margin: 0;
+    padding: 0;
+    display: flex; /* Mostrar elementos horizontalmente */
+    justify-content: center; /* Centrar horizontalmente */
+}
+
+/* Estilos de cada elemento de la lista (link) */
+nav li {
+    display: inline; /* Mostrar elementos en línea */
+    margin: 20px; /* Espaciado entre elementos */
+    position: relative; /* Necesario para posicionar submenús */
+}
+
+/* Estilos del enlace dentro del nav */
+nav a {
+    /* Apariencia de los enlaces del menú */
+    color: #185670; /* Color del texto */
+    text-decoration: none; /* Eliminar subrayado */
+    font-size: 0.9rem;
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    background-color: #93D4F0; /* Fondo inicial */
+    transition: background-color 0.3s, color 0.3s; /* Efecto suave al interactuar */
+    white-space: nowrap; /* Evitar que el texto se corte */
+}
+
+nav a:hover {
+    /* Estilo al pasar el mouse sobre un enlace */
+    background-color: #185670; /* Cambiar fondo */
+    color: white; /* Cambiar color de texto */
+}
+
+/* Estilos del submenú y el sub-submenú */
+.submenu, .subsub {
+    /* Inicialmente ocultos */
+    display: none;
+    position: absolute; /* Posición relativa al elemento padre */
+    top: 100%; /* Aparece debajo del padre */
+    left: 0;
+    border-radius: 10px; /* Bordes redondeados */
+    border: 1px solid #93D4F0; /* Borde con color */
+    background-color: #93D4F0; /* Fondo del submenú */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 20px; /* Separación con el padre */
+}
+
+/* Mostrar sub-submenú cuando el submenú está en hover */
+.submenu li:hover > .subsub {
+    display: block; /* Mostrar submenú */
+    left: 100%; /* Aparece a la derecha del padre */
+    top: 0; /* Alineado con el padre */
+}
+
+/* Estilos de los elementos dentro del submenú */
+.submenu li, .subsub li {
+    margin: 0; /* Sin márgenes */
+    padding: 0; /* Sin relleno */
+    width: 200px; /* Ancho fijo para uniformidad */
+}
+
+/* Estilos de los enlaces dentro del submenú */
+.submenu a, .subsub a {
+    /* Apariencia similar a los enlaces principales */
+    display: block;
+    color: #185670;
+    padding: 10px 15px;
+    font-size: 0.85rem;
+}
+
+submenu a:hover, .subsub a:hover {
+    /* Estilo al interactuar con enlaces del submenú */
+    background-color: #185670;
+    color: white;
+}
+
+/* Mostrar submenú al pasar el cursor por encima del elemento padre */
+nav li:hover > .submenu {
+    display: block; /* Mostrar submenú */
+}
+
+/* Estilos del formulario */
+main {
+    /* Configuración de layout del formulario */
+    padding: 50px 0; /* Espaciado superior e inferior */
+    display: flex; /* Centrar formulario */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Altura total de la ventana */
+}
+
+main > section {
+    /* Contenedor para secciones principales */
+    display: flex;
+    align-items: center; /* Centrar contenido */
+    flex-direction: column; /* Apilar elementos */
+}
+
+h2 {
+    /* Encabezado del formulario */
+    text-align: center; /* Texto centrado */
+    color: #85bed6; /* Color del texto */
+    margin-bottom: 30px; /* Separación inferior */
+}
+
+form {
+    /* Apariencia general del formulario */
+    background-color: rgba(255, 255, 255, 0.8); /* Fondo semitransparente */
+    padding: 25px;
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra */
+    width: 350px; /* Ancho fijo */
+    display: flex; /* Layout flexible */
+    flex-direction: column; /* Apilar inputs */
+}
+
+.input-container {
+    /* Contenedor para iconos e inputs */
+    position: relative; /* Posicionar iconos */
+    margin-bottom: 20px; /* Separación entre inputs */
+}
+
+.input-icon {
+    /* Iconos de los inputs */
+    position: absolute;
+    top: 50%; /* Centrado vertical */
+    left: 10px; /* Separación izquierda */
+    transform: translateY(-50%); /* Ajuste vertical */
+    font-size: 24px; /* Tamaño del icono */
+    color: #777; /* Color inicial */
+}
+
+.datos {
+    /* Estilo de los inputs */
+    width: 80%; /* Ocupa un 80% del contenedor */
+    padding: 10px 15px 10px 45px; /* Espaciado extra para el icono */
+    border: none;
+    border-radius: 25px; /* Bordes redondeados */
+    font-size: 16px;
+    color: #333; /* Color del texto */
+    background-color: #f7f7f7; /* Fondo del input */
+    outline: none; /* Eliminar borde al seleccionar */
+    transition: border-color 0.3s ease; /* Efecto al interactuar */
+}
+
+.terminos {
+    /* Margen especial para checkbox */
+    margin: 20px;
+}
+
+input[type="checkbox"] {
+    /* Checkbox de términos */
+    margin-right: 10px;
+    cursor: pointer; /* Cambia cursor a mano */
+}
+
+button {
+    /* Botón de envío */
+    background-color: #185670; /* Fondo inicial */
+    color: white; /* Texto blanco */
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease; /* Cambio suave */
+}
+
+button:hover {
+    /* Cambio al pasar el cursor */
+    background-color: #2196F3;
+}
+
+a {
+    /* Enlaces dentro del formulario */
+    color: #185670; /* Color inicial */
+    text-decoration: none; /* Sin subrayado */
+}
+
+a:hover {
+    /* Efecto al interactuar */
+    color: #2196F3; /* Color más claro */
+}
